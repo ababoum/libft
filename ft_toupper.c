@@ -3,25 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mababou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mababou <mababou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 22:31:31 by mababou           #+#    #+#             */
-/*   Updated: 2021/11/25 18:20:37 by mababou          ###   ########.fr       */
+/*   Updated: 2022/04/13 20:59:25 by mababou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	return (c);
 }
-/*#include <libc.h>
-int main(int ac, char **av)
-{
-	if (ac > 0)
-	{
-		printf("%c\n", ft_toupper(av[1][0]));
-	}
-}*/

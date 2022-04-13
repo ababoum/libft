@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mababou <mababou@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/04/13 20:26:19 by mababou           #+#    #+#              #
+#    Updated: 2022/04/13 20:43:12 by mababou          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS	= ft_atoi.c ft_bzero.c ft_calloc.c \
 		  ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		  ft_isdigit.c ft_isprint.c ft_itoa.c \
@@ -27,7 +39,7 @@ AR		= ar rc
 
 RM		= rm -f
 
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra -g
 
 .c.o:		${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 

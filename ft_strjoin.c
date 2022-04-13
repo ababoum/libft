@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mababou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mababou <mababou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:03:21 by mababou           #+#    #+#             */
-/*   Updated: 2021/11/24 17:40:08 by mababou          ###   ########.fr       */
+/*   Updated: 2022/04/13 20:54:45 by mababou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -28,14 +28,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	while (s2[i])
 		joined[j++] = s2[i++];
-	joined[j] = '\0';
+	joined[j] = 0;
 	return (joined);
 }
-/*#include <libc.h>
-int main(int ac, char **av)
-{
-	if (ac > 0)
-	{
-		printf("%s\n", ft_strjoin(av[1], av[2]));
-	}
-}*/

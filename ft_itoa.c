@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mababou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mababou <mababou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:14:59 by mababou           #+#    #+#             */
-/*   Updated: 2021/11/26 15:15:15 by mababou          ###   ########.fr       */
+/*   Updated: 2022/04/13 20:25:00 by mababou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
 
-int	nb_len(long int n)
+#include "libft.h"
+
+static int	nb_len(long int n)
 {
 	if (n >= 0 && n <= 9)
 		return (1);
@@ -36,19 +37,11 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (sign == 1)
 		output[0] = '-';
-	output[i + 1] = '\0';
+	output[i + 1] = 0;
 	while (i >= sign)
 	{
-		output[i--] = (nb % 10) + 48;
+		output[i--] = (nb % 10) + '0';
 		nb = nb / 10;
 	}
 	return (output);
 }
-/*#include <libc.h>
-int main(int ac, char **av)
-{
-	if (ac > 0)
-	{
-		printf("%s\n", ft_itoa(atoi(av[1])));
-	}
-}*/

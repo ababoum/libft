@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mababou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mababou <mababou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 22:24:42 by mababou           #+#    #+#             */
-/*   Updated: 2021/11/27 17:08:09 by mababou          ###   ########.fr       */
+/*   Updated: 2022/04/13 20:57:08 by mababou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
@@ -19,7 +20,7 @@ char	*ft_strrchr(const char *str, int c)
 	i = ft_strlen(str);
 	c = (unsigned char)c;
 	tmp = (char *)str;
-	if (c == '\0')
+	if (!c)
 		return (tmp + i);
 	while (i >= 0)
 	{
